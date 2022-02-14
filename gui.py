@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 
-from logging import shutdown
+import sys
+import threading
 import tkinter as tk
 
-from ppadb import command
 import device
-import threading
-import sys
-import subprocess
-
 
 # GLOBAL CONSTANTS
-IP = "192.168.1.103"
+IP = sys.argv[1]
 PORT = 5555
 WIDTH = 500
 HEIGHT = 500

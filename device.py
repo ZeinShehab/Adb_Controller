@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import subprocess
-from ppadb.client import Client as AdbClient
-import sys
 import os
+import subprocess
+import sys
 
+from ppadb.client import Client as AdbClient
 
 # GLOBAL CONSTANTS
 LHOST = "127.0.0.1"
@@ -19,10 +19,6 @@ class Device:
         self.rport = rport
         self.dname = dname
         self.client = AdbClient(host=LHOST, port=LPORT)
-        self.dispatcher = {
-            "disconnect":self.disconnect,
-            "screenshot":self.screenshot
-        }
         self.device = self.connect()
 
     # Connect to remote host
